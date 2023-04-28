@@ -1,0 +1,47 @@
+Jenkins
+===========
+This is a tool used for implementing CI-CD
+
+Stage in CI-CD
+====================
+Stage 1 (Continuous Download)
+------------------------------------
+Whenever developers upload some code into the Git repository
+Jenkins  will receive a notification and it will download 
+all that code.This is called as Continuous Download
+
+Stage 2 (Continuous Build)
+-----------------------------------
+The code downloaded in the previosu stage had to converted
+into a setup file commonly known ar aritfact.To create this 
+artifact jenkins uses certain build tools like ANT,Maven etc
+The artifact can be inthe format of a .jar,.war..ear file etc
+This stage is called as Continuous Build
+
+Stage 3 (Continuous Deployment)
+-----------------------------------
+The artifact created in the previous stage has to be deployed into
+the QAServers where a team of testers can start accessing it.
+This QA environment can be running on some application servers like
+tomcat,Weblogic etc.Jenkins deploys the artifact into these application
+servers and this is called Continuous Deployment
+
+Stage 4 (Continuous Testing)
+-----------------------------------
+Testers create automation test scripts using tools like selenium,UFT etc
+JEnkins run these automation test scripts and checks if the application
+is working according to clients requitrement or not,If testing fails
+JEnkins will send automated email notifications to the corresponding
+team members and developers will finx the defects and upload the modifed 
+code into Git,Jenkins will again start from stage 1
+
+Stage 5 (Continuous Delivery)
+-----------------------------------
+Once the application is found to be defect free Jenkins will deploy it
+into the Prod servers where the end user or clinet can start accessing it
+This is called continuous delivery
+
+Here the first 4 stages represent CI (Continuous Integration)
+the laste stage represents CD (Continuous Delivery)
+
+=========================================================================
