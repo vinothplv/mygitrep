@@ -1,17 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE WIDL-MAPPING SYSTEM "widl32_mapping.dtd">
 
-<WIDL-MAPPING NAME="AccessLiftHandlers_FP" VERSION="3.2">
-
-  <!-- ============================================== -->
-
-  <SERVICE NAME="AccessLiftHandlers_FP"
-    OUTPUT="AccessLiftHandlers_FPOutput"
-    METHOD="GET"
-    URL="http://apache.moreover.com/harvesting/download_https.pl?URL=https://www.accesslifthandlers.com/"
-    COMMENT=""/>
-
-  <!-- ============================================== -->
 
   <OUTPUT-BINDING NAME="AccessLiftHandlers_FPOutput">
     <CONDITION TYPE="SUCCESS" SERVICE="PostResults:PostResults"/>
