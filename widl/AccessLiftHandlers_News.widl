@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE WIDL-MAPPING SYSTEM "widl32_mapping.dtd">
+
+<WIDL-MAPPING NAME="AccessLiftHandlers_News" VERSION="3.2">
+
+  <!-- ============================================== -->
+
+  <SERVICE NAME="AccessLiftHandlers_News"
+    OUTPUT="AccessLiftHandlers_NewsOutput"
+    METHOD="GET"
+    URL="http://apache.moreover.com/harvesting/download_https.pl?URL=https://www.accesslifthandlers.com/news"
+    COMMENT=""/>
+
+  <!-- ============================================== -->
+
+  <OUTPUT-BINDING NAME="AccessLiftHandlers_NewsOutput">
+    <CONDITION TYPE="SUCCESS" SERVICE="PostResults:PostResults"/>
+    <VALUE NAME="hltext" DIM="2" USAGE="DEFAULT" VALUEONLY="TRUE">doc.html[0].div(class=khl-article-block-headline font-weight-bold h4).a[0-10].txt['$']</VALUE>
+    <VALUE NAME="context" DIM="2" USAGE="DEFAULT" VALUEONLY="TRUE">doc.html[0].div(class=khl-article-block-headline font-weight-bold h4).a[0-10].txt['$']</VALUE>
+    <VALUE NAME="hllink" DIM="2" USAGE="DEFAULT" VALUEONLY="TRUE">doc.html[0].div(class=khl-article-block-headline font-weight-bold h4).a[0-10].href[/.over.com(.*)/]</VALUE>
+    <VALUE NAME="hllinkBaseUrl" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">https://www.accesslifthandlers.com</VALUE>
+    <VALUE NAME="widlname" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">AccessLiftHandlers_News.widl</VALUE>
+    <VALUE NAME="keywords" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Miscellaneous</VALUE>
+    <VALUE NAME="keywords_public" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Professional;Business</VALUE>
+    <VALUE NAME="genre" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">General</VALUE>
+    <VALUE NAME="language_charset" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE"></VALUE>
+    <VALUE NAME="source" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">AccessLiftHandlers.com</VALUE>
+    <VALUE NAME="source_rank" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">3</VALUE>
+    <VALUE NAME="country" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">United Kingdom</VALUE>
+    <VALUE NAME="source_category" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Trade</VALUE>
+    <VALUE NAME="docurl" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">https://www.accesslifthandlers.com/news</VALUE>
+    <VALUE NAME="description" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">SR#5517701</VALUE>
+    <VALUE NAME="access_status" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE"></VALUE>
+    <VALUE NAME="access_registration" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE"></VALUE>
+    <VALUE NAME="language" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">English</VALUE>
+    <VALUE NAME="process_rules" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Yes</VALUE>
+    <VALUE NAME="lifespan" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">300</VALUE>
+    <VALUE NAME="hlmatch" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">eithermatch</VALUE>
+    <VALUE NAME="media_type" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">text</VALUE>
+    <VALUE NAME="source_short" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">sourceblank</VALUE>
+    <VALUE NAME="auto_charset_head" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE">meta(content=/[Cc]harset/).src[/[Cc]harset=([^"]*)/]</VALUE>
+    <VALUE NAME="price" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">0</VALUE>
+    <VALUE NAME="sourceId" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">286435</VALUE>
+  </OUTPUT-BINDING>
+
+  <!-- ============================================== -->
+
+</WIDL-MAPPING>

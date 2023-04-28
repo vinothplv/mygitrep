@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE WIDL-MAPPING SYSTEM "widl32_mapping.dtd">
+
+<WIDL-MAPPING NAME="LOfficielUK_Fashion" VERSION="3.2">
+
+  <!-- ============================================== -->
+
+  <SERVICE NAME="LOfficielUK_Fashion"
+    OUTPUT="LOfficielUK_FashionOutput"
+    METHOD="GET"
+    URL="http://apache.moreover.com/harvesting/download_https.pl?URL=https://www.lofficiel.co.uk/categories/fashion"
+    COMMENT=""/>
+
+  <!-- ============================================== -->
+
+  <OUTPUT-BINDING NAME="LOfficielUK_FashionOutput">
+    <VALUE NAME="hltext" DIM="1" USAGE="DEFAULT" VALUEONLY="TRUE">doc.h3(class=/stack-showcase__title|hallway__title/).txt['$']</VALUE>
+    <VALUE NAME="context" DIM="1" USAGE="DEFAULT" VALUEONLY="TRUE">doc.h3(class=/stack-showcase__title|hallway__title/).txt['$']</VALUE>
+    <VALUE NAME="hllink" DIM="1" USAGE="DEFAULT" VALUEONLY="TRUE">doc.h3(class=/stack-showcase__title|hallway__title/).^2.href[/.com(.*)/]</VALUE>
+    <VALUE NAME="hllinkBaseUrl" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">https://www.lofficiel.co.uk</VALUE>
+    <VALUE NAME="widlname" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">LOfficielUK_Fashion.widl</VALUE>
+    <VALUE NAME="keywords" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Miscellaneous</VALUE>
+    <VALUE NAME="keywords_public" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Consumer;Lifestyle;Fashion</VALUE>
+    <VALUE NAME="genre" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">General</VALUE>
+    <VALUE NAME="language_charset" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE"></VALUE>
+    <VALUE NAME="source" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">L'Officiel UK</VALUE>
+    <VALUE NAME="source_rank" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">4</VALUE>
+    <VALUE NAME="country" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">United Kingdom</VALUE>
+    <VALUE NAME="source_category" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Consumer</VALUE>
+    <VALUE NAME="docurl" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">https://www.lofficiel.co.uk/categories/fashion</VALUE>
+    <VALUE NAME="description" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">SR#5517701</VALUE>
+    <VALUE NAME="access_status" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE"></VALUE>
+    <VALUE NAME="access_registration" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE"></VALUE>
+    <VALUE NAME="language" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">English</VALUE>
+    <VALUE NAME="process_rules" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Yes</VALUE>
+    <VALUE NAME="lifespan" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">300</VALUE>
+    <VALUE NAME="hlmatch" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">eithermatch</VALUE>
+    <VALUE NAME="media_type" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">text</VALUE>
+    <VALUE NAME="source_short" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">sourceblank</VALUE>
+    <VALUE NAME="auto_charset_head" USAGE="DEFAULT" VALUEONLY="TRUE" NULLOK="TRUE">meta(content=/[Cc]harset/).src[/[Cc]harset=([^"]*)/]</VALUE>
+    <VALUE NAME="price" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">0</VALUE>
+    <VALUE NAME="sourceId" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">286413</VALUE>
+    <VALUE NAME="process_only" CONTENT="CONSTANT" USAGE="DEFAULT" VALUEONLY="TRUE">Consumer: *|Entertainment: *|all *|mo *|widl *</VALUE>
+  </OUTPUT-BINDING>
+
+  <!-- ============================================== -->
+
+</WIDL-MAPPING>
